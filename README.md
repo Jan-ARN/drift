@@ -1,5 +1,5 @@
 <!-- ===== HERO (custom SVG — assets/banner.svg) — a code line and its comment drifting apart at dusk ===== -->
-<img width="100%" src="https://raw.githubusercontent.com/Jan-ARN/drift/main/assets/banner.svg" alt="drift — comment & doc rot detection for Claude Code"/>
+<img width="100%" src="https://raw.githubusercontent.com/Jan-ARN/drift/main/assets/banner.svg?v=2" alt="drift — comment & doc rot detection for Claude Code"/>
 
 <div align="center">
 

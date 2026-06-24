@@ -1,0 +1,9 @@
+{
+  "name": "drift",
+  "version": "0.1.0",
+  "description": "Comment & doc rot detector — flags comments and docstrings that no longer match the code beside them, via a cheap static pre-filter, multi-lens review, and adversarial verification that learns your repo's patterns over time. Run author-time before commit, review-time on a PR, or wholesale on a file. TypeScript/JavaScript first.",
+  "author": {
+    "name": "Jan Arnemann"
+  },
+  "keywords": ["comment-rot", "documentation", "code-review", "docstrings", "stale-comments", "jsdoc"]
+}

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="drift — comment and doc rot detection for Claude Code">
+  <defs>
+    <!-- dusk sky -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"    stop-color="#0F1C26"/>
+      <stop offset="0.45" stop-color="#1C3445"/>
+      <stop offset="0.78" stop-color="#2F4D63"/>
+      <stop offset="1"    stop-color="#456A82"/>
+    </linearGradient>
+    <!-- warm low glow -->
+    <radialGradient id="glow" cx="0.5" cy="0.62" r="0.6">
+      <stop offset="0"   stop-color="#C79A5E" stop-opacity="0.4"/>
+      <stop offset="0.4" stop-color="#A87E54" stop-opacity="0.16"/>
+      <stop offset="1"   stop-color="#A87E54" stop-opacity="0"/>
+    </radialGradient>
+    <!-- the divergence flare: where comment leaves code -->
+    <radialGradient id="flare" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F0C880" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#F0C880" stop-opacity="0"/>
+    </radialGradient>
+    <!-- the code line: steady cream -->
+    <linearGradient id="codeLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"   stop-color="#F3ECDB" stop-opacity="0.25"/>
+      <stop offset="0.3" stop-color="#F3ECDB" stop-opacity="0.9"/>
+      <stop offset="1"   stop-color="#F3ECDB" stop-opacity="0.9"/>
+    </linearGradient>
+    <!-- the comment line: gold, drifting -->
+    <linearGradient id="commentLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"    stop-color="#F0C880" stop-opacity="0.25"/>
+      <stop offset="0.3"  stop-color="#F0C880" stop-opacity="0.9"/>
+      <stop offset="1"    stop-color="#C79A5E" stop-opacity="0.65"/>
+    </linearGradient>
+    <clipPath id="frame"><rect width="1200" height="300" rx="0"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="300" fill="url(#sky)"/>
+    <rect width="1200" height="300" fill="url(#glow)"/>
+
+    <!-- faint stars -->
+    <g fill="#DCE6EE">
+      <circle cx="140" cy="48"  r="1.1" opacity="0.7"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="5s" repeatCount="indefinite"/></circle>
+      <circle cx="320" cy="30"  r="0.9" opacity="0.5"><animate attributeName="opacity" values="0.5;0.15;0.5" dur="6.5s" repeatCount="indefinite"/></circle>
+      <circle cx="520" cy="60"  r="1.0" opacity="0.6"><animate attributeName="opacity" values="0.6;0.2;0.6" dur="4.2s" repeatCount="indefinite"/></circle>
+      <circle cx="240" cy="90"  r="0.8" opacity="0.4"/>
+      <circle cx="960" cy="40"  r="1.1" opacity="0.6"><animate attributeName="opacity" values="0.6;0.2;0.6" dur="5.8s" repeatCount="indefinite"/></circle>
+      <circle cx="1080" cy="70" r="0.9" opacity="0.45"/>
+      <circle cx="700" cy="36"  r="0.8" opacity="0.4"/>
+      <circle cx="430" cy="84"  r="0.8" opacity="0.4"/>
+    </g>
+
+    <!-- THE METAPHOR: a code line and its comment line, aligned at the left,
+         drifting apart to the right. The gap is the rot. -->
+    <g transform="translate(0,150)">
+      <!-- shared origin: where they still agree -->
+      <line x1="120" y1="-10" x2="560" y2="-10" stroke="url(#codeLine)" stroke-width="3" stroke-linecap="round"/>
+      <line x1="120" y1="10"  x2="560" y2="10"  stroke="url(#commentLine)" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- the drift: comment peels away downward, code holds its line -->
+      <path d="M560,-10 L1080,-10" stroke="url(#codeLine)" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <path d="M560,10 C720,28 880,64 1080,92" stroke="url(#commentLine)" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+      <!-- the divergence flare -->
+      <circle cx="560" cy="0" r="44" fill="url(#flare)" opacity="0.55">
+        <animate attributeName="opacity" values="0.55;0.85;0.55" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="560" cy="0" r="3.2" fill="#F3ECDB"/>
+
+      <!-- code ticks (steady) -->
+      <g stroke="#F3ECDB" stroke-width="2.4" stroke-linecap="round" opacity="0.7">
+        <line x1="150" y1="-10" x2="178" y2="-10"/>
+        <line x1="196" y1="-10" x2="240" y2="-10"/>
+        <line x1="258" y1="-10" x2="300" y2="-10"/>
+        <line x1="620" y1="-10" x2="664" y2="-10"/>
+        <line x1="700" y1="-10" x2="744" y2="-10"/>
+        <line x1="900" y1="-10" x2="952" y2="-10"/>
+      </g>
+      <!-- comment ticks, riding the drifting curve -->
+      <g stroke="#F0C880" stroke-width="2.4" stroke-linecap="round" opacity="0.7">
+        <line x1="150" y1="10" x2="178" y2="10"/>
+        <line x1="196" y1="10" x2="244" y2="10"/>
+        <line x1="262" y1="10" x2="300" y2="10"/>
+        <line x1="636" y1="20" x2="680" y2="23"/>
+        <line x1="760" y1="36" x2="812" y2="42"/>
+        <line x1="940" y1="74" x2="992" y2="82"/>
+      </g>
+    </g>
+
+    <!-- low mist -->
+    <rect x="0" y="250" width="1200" height="50" fill="#9FBBCD" opacity="0.06"/>
+  </g>
+</svg>

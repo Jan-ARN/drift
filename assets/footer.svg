@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150" width="1200" height="150" role="img" aria-label="A comment is a promise about the code — keep it true.">
+  <defs>
+    <linearGradient id="fsky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#0F1C26"/>
+      <stop offset="0.6" stop-color="#152834"/>
+      <stop offset="1"   stop-color="#1C3445"/>
+    </linearGradient>
+    <radialGradient id="fflare" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F0C880" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#F0C880" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="fframe"><rect width="1200" height="150"/></clipPath>
+  </defs>
+  <g clip-path="url(#fframe)">
+    <rect width="1200" height="150" fill="url(#fsky)"/>
+
+    <!-- faint stars -->
+    <g fill="#DCE6EE">
+      <circle cx="180" cy="34" r="0.9" opacity="0.5"><animate attributeName="opacity" values="0.5;0.15;0.5" dur="6s" repeatCount="indefinite"/></circle>
+      <circle cx="1010" cy="28" r="1.0" opacity="0.6"><animate attributeName="opacity" values="0.6;0.2;0.6" dur="5s" repeatCount="indefinite"/></circle>
+      <circle cx="620" cy="22" r="0.8" opacity="0.4"/>
+      <circle cx="860" cy="40" r="0.8" opacity="0.4"/>
+      <circle cx="360" cy="46" r="0.8" opacity="0.45"/>
+    </g>
+
+    <!-- the two lines, drifted apart, meeting the horizon -->
+    <g transform="translate(0,84)">
+      <line x1="150" y1="-6" x2="1050" y2="-6" stroke="#F3ECDB" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+      <path d="M150,6 C420,14 720,30 1050,40" stroke="#F0C880" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+      <circle cx="150" cy="0" r="18" fill="url(#fflare)" opacity="0.5"/>
+      <circle cx="150" cy="0" r="2.4" fill="#F3ECDB"/>
+    </g>
+
+    <!-- the creed -->
+    <text x="600" y="118" text-anchor="middle" font-family="ui-serif, Georgia, 'Times New Roman', serif" font-size="15" letter-spacing="0.5" fill="#9FBBCD" opacity="0.85" font-style="italic">A comment is a promise about the code — keep it true.</text>
+  </g>
+</svg>

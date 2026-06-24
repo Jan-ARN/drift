@@ -1,0 +1,13 @@
+{
+  "name": "drift",
+  "owner": {
+    "name": "Jan Arnemann"
+  },
+  "plugins": [
+    {
+      "name": "drift",
+      "source": "./",
+      "description": "Comment & doc rot detector — flags comments and docstrings that no longer match the code beside them, with a cheap static pre-filter, multi-lens review, and adversarial verification that learns your repo's patterns over time."
+    }
+  ]
+}

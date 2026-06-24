@@ -67,7 +67,7 @@ drift isn't one prompt — it's a pipeline tuned for **high recall, low noise**:
 
 - **`/drift`** — *author-time.* Comments touched by your uncommitted diff. Can apply approved fixes (reword or delete the comment, never the code). The common case.
 - **`/drift pr`** *(or `/drift <base-ref>`)* — *review-time.* Comments in the branch vs. its base. Read-only; can post PR comments on request.
-- **`/drift <path>`** — scope to a file/folder; with no diff, scans it wholesale.
+- **`/drift <path>`** — scope to a file/folder; with no diff, scans it wholesale. **This is where drift shines** — point it at your most heavily-commented, most-churned files, where prose is likeliest to have drifted out of sync with the code.
 
 A `Stop` hook nudges you to run `/drift` when your uncommitted diff changes code near comments (tune with `DRIFT_DIFF_THRESHOLD`, default 80). It never blocks. Per-repo conventions live in `.claude/drift-house-style.md` (copy [`house-style/EXAMPLE.md`](house-style/EXAMPLE.md)); drift's own calibration is kept automatically in `.claude/drift-learnings.md`.
 

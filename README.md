@@ -85,4 +85,4 @@ Then `/drift` is available in every project.
 MIT — see [LICENSE](LICENSE).
 
 <!-- ===== FOOTER (custom SVG — assets/footer.svg) — the two lines drifted apart, the creed ===== -->
-<img width="100%" src="https://raw.githubusercontent.com/Jan-ARN/drift/main/assets/footer.svg" alt="A comment is a promise about the code — keep it true."/>
+<img width="100%" src="https://raw.githubusercontent.com/Jan-ARN/drift/main/assets/footer.svg?v=2" alt="A comment is a promise about the code — keep it true."/>
